@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <title>
+            Input Form
+        </title>
+        <link rel="stylesheet" href="style.css" />
+        
+        <script src="https://kit.fontawesome.com/e50e7d169d.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body> 
+
+<div class="container">
+    <div class="content">
+      <div class="logo">
+        <img src="https://svgshare.com/i/_go.svg" alt="" />
+      </div>
+      <div class="image"></div>
+      <div class="text">
+        Start for free & get <br />
+        attractive offers today !
+      </div>
+    </div>
+    <form action="result.html" method="GET" id="form" onsubmit="handleSubmit(event)">
+      <div class="social">
+        <div class="title">Get Started</div>
+        <div class="question">
+          Already Have an Account? <br />
+          <span>Sign In</span>
+        </div>
+  
+        <div class="btn">
+          <div class="btn-1">
+            <img src="https://img.icons8.com/color/30/000000/google-logo.png" />
+            Sign Up
+          </div>
+          <div class="btn-2">
+            <img src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" />
+            Sign Up
+          </div>
+        </div>
+  
+        <div class="or">Or</div>
+      </div>
+  
+      <!-- /** 
+            * ! user name Input here
+           **/ -->
+  
+      <div>
+        <label for="username">Name</label>
+        <i class="fas fa-user"></i>
+        <input type="text" name="username" id="username" onfocusout = "emptynot()" placeholder="Joy Shaheb" />
+        <i class="fas fa-exclamation-circle failure-icon"></i>
+        <i class="far fa-check-circle success-icon"></i>
+      
+        <div class="" id="usernameError">Name should not contain numbers and be empty.</div>
+
+      </div>
+  
+      <!-- /** 
+            * ! Email Input here
+           **/ -->
+  
+      <div>
+        <label for="email">Email</label>
+        <i class="far fa-envelope"></i>
+        <input type="email" name="email" id="email" onfocusout = "emptynot()" placeholder="abc@gmail.com" />
+        <i class="fas fa-exclamation-circle failure-icon"></i>
+        <i class="far fa-check-circle success-icon"></i>
+        <div class="" id="emailError">Email should not be empty and in valid format.</div>
+        
+ 
+      </div>
+  
+      <!-- /** 
+            * ! Password Input here
+           **/ -->
+  
+      <div>
+        <label for="password">Password</label>
+        <i class="fas fa-lock"></i>
+        <input type="password" name="password" id="password" placeholder="Password here" required / >
+        <i class="fas fa-eye-slash" id="togglePassword"></i>
+      
+        <div class="error"></div>
+      </div>
+
+      <div>
+        <label for="phone">Phone Number</label>
+        <i class="fas fa-phone phoneicon"></i>
+        <input type="tel" name="phone" id="phone" placeholder="Phone Number" />
+        <div class="" id="phoneError">Phone number should not be empty and in valid format.</div> 
+        <div class="error"></div>
+    </div>
+    
+    <div>
+        <label for="gender">Gender</label>
+        <div class="radio-buttons">
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+            <div id="genderError"   >Please select a gender</div>
+        </div>
+    </div>
+    
+    <div>
+        <label for="image">Upload Image</label>
+        <input type="file" id="image" name="image" accept="image/* " required>
+    </div>
+    <div>
+      <label for="captcha">Captcha</label>
+      <div class="captcha-input">
+        <span id="captchaPrefix" class="captcha-prefix"></span>
+        <input type="text" name="captcha" id="captcha" placeholder="Enter CAPTCHA">
+      </div>
+      <span id="captchaError" style="color: red; display: none;">Please Enter CAPTCHA</span>
+    </div>
+       <a href="https://www.geeksforgeeks.org/what-is-shallow-copy-and-deep-copy-in-javascript/" class="forgot">Forgot your password?</a>
+      <button type="submit" id="submit" onclick="handleSubmit()">Submit</button>
+    </form>
+  </div>
+  <script type="text/javascript" async src="index.js"></script>
+    </body>
+
+</html>
